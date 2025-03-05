@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const letters = ["A", "B", "C", "D", "E"];
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     const letterDisplay = document.getElementById("letterDisplay");
     const message = document.getElementById("message");
     const buttons = document.querySelectorAll(".letter-btn");
@@ -35,7 +35,27 @@ document.querySelectorAll('.letter').forEach(letterElement => {
             'C': 'Cat',
             'D': 'Dog',
             'E': 'Egg',
-            // Add more letters and words as needed
+            'F': 'Fish',
+            'G': 'Goat',
+            'H': 'Hat',
+            'I': 'Ice',
+            'J': 'Jug',
+            'K': 'Kite',
+            'L': 'Lion',
+            'M': 'Mouse',
+            'N': 'Nest',
+            'O': 'Owl',
+            'P': 'Pig',
+            'Q': 'Queen',
+            'R': 'Rat',
+            'S': 'Sun',
+            'T': 'Tiger',
+            'U': 'Umbrella',
+            'V': 'Violin',
+            'W': 'Whale',
+            'X': 'Xylophone',
+            'Y': 'Yak',
+            'Z': 'Zebra'
         };
         const word = words[letter] || '';
         if (word) {
@@ -44,5 +64,3 @@ document.querySelectorAll('.letter').forEach(letterElement => {
         }
     });
 });
-const testUtterance = new SpeechSynthesisUtterance('Hello, this is a test.');
-window.speechSynthesis.speak(testUtterance);
