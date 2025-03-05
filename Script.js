@@ -44,3 +44,5 @@ document.querySelectorAll('.letter').forEach(letterElement => {
         }
     });
 });
+const testUtterance = new SpeechSynthesisUtterance('Hello, this is a test.');
+window.speechSynthesis.speak(testUtterance);
