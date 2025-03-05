@@ -25,3 +25,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     generateLetter(); // Start the game with a random letter
 });
+
+document.querySelectorAll('.letter').forEach(letterElement => {
+    letterElement.addEventListener('click', () => {
+        const letter = letterElement.textContent.trim().toUpperCase();
+        const words = {
+            'A': 'Apple',
+            'B': 'Ball',
+            'C': 'Cat',
+            'D': 'Dog',
+            'E': 'Egg',
+            // Add more letters and words as needed
+        };
+        const word = words[letter] || '';
+        if (word) {
+            const utterance = new SpeechSynthesisUtterance(`${letter} for ${word}`);
+            window.speechSynthesis.speak(utterance);
+        }
+    });
+});
