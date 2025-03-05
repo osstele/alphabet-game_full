@@ -61,6 +61,8 @@ document.querySelectorAll('.letter').forEach(letterElement => {
         if (word) {
             const utterance = new SpeechSynthesisUtterance(`${letter} for ${word}`);
             window.speechSynthesis.speak(utterance);
-        }
+        } else {
+    console.error("Speech synthesis is not supported in this browser.");
+}
     });
 });
