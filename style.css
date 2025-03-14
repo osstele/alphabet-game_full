@@ -1,3 +1,58 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #ff0000 50%, #0000ff 50%); /* Red and blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.letter-display {
+    font-size: 100px; /* Increased font size */
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.letter-btn {
+    font-size: 36px; /* Increased font size */
+    padding: 20px;
+    border: none;
+    background-color: #ff0000; /* Red buttons */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60px; /* Increased width */
+}
+
+.letter-btn:hover {
+    background-color: #0000ff; /* Blue on hover */
+}
+
+#message {
+    font-size: 24px; /* Increased font size */
+    margin-top: 10px;
+}
+
+
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
