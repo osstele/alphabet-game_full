@@ -5,6 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alphabet Recognition Game</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/wp/wp4507792.jpg'); /* Spider-Man themed background */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .game-container {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .letter-display {
+            font-size: 100px;
+            font-weight: bold;
+            color: yellow;
+            margin: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .letter-btn {
+            font-size: 40px;
+            font-weight: bold;
+            padding: 15px 25px;
+            border: none;
+            background: red;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .letter-btn:hover {
+            background: blue;
+        }
+
+        #message {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="game-container">
@@ -41,6 +94,7 @@
         </div>
         <p id="message"></p>
     </div>
+
     <script src="Script.js"></script>
 </body>
 </html>
