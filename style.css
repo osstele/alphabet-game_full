@@ -31,7 +31,7 @@ body {
 }
 
 .letter-btn {
-    font-size: 36px; /* Increased font size */
+    font-size: 40px; /* Increased font size */
     padding: 20px;
     border: none;
     background-color: #ff0000; /* Red buttons */
@@ -46,7 +46,7 @@ body {
 }
 
 #message {
-    font-size: 24px; /* Increased font size */
+    font-size: 28px; /* Increased font size */
     margin-top: 10px;
 }
 
