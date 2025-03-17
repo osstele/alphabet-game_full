@@ -59,10 +59,15 @@ document.querySelectorAll('.letter').forEach(letterElement => {
         };
         const word = words[letter] || '';
         if (word) {
-            const utterance = new SpeechSynthesisUtterance(`${letter} for ${word}`);
-            window.speechSynthesis.speak(utterance);
-        } else {
-    console.error("Speech synthesis is not supported in this browser.");
-}
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(`${letter} for ${word}`);
+                console.log(`Speaking: ${letter} for ${word}`);
+                window.speechSynthesis.speak(utterance);
+            } else {
+                console.error("Speech synthesis is not supported in this browser.");
+            }
+        }
     });
 });
+
+console.log(window.speechSynthesis.getVoices());
