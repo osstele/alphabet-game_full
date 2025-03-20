@@ -1,50 +1,64 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #ff0000 50%, #0000ff 50%); /* Red and blue background */
+    background: linear-gradient(180deg, #ff0000 50%, #0000ff 50%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    text-align: center;
+    color: white;
 }
 
 .game-container {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    width: 400px;
+    margin: 20px;
 }
 
 .letter-display {
-    font-size: 100px; /* Increased font size */
+    font-size: 5vw; /* Responsive font size */
     font-weight: bold;
+    color: yellow;
     margin: 20px 0;
 }
 
 .buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
 
 .letter-btn {
-    font-size: 40px; /* Increased font size */
-    padding: 20px;
+    font-size: 4vw; /* Responsive font size */
+    font-weight: bold;
+    padding: 10px 20px;
     border: none;
-    background-color: #ff0000; /* Red buttons */
+    background: red;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    width: 60px; /* Increased width */
+    transition: 0.3s;
 }
 
 .letter-btn:hover {
-    background-color: #0000ff; /* Blue on hover */
+    background: blue;
 }
 
 #message {
-    font-size: 28px; /* Increased font size */
-    margin-top: 10px;
+    font-size: 2.5vw; /* Responsive font size */
+    margin-top: 20px;
+}
+
+img#imageDisplay {
+    width: 10vw;
+    height: 10vw;
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 20px;
 }
