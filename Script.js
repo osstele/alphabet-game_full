@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const letterDisplay = document.getElementById("letterDisplay");
     const message = document.getElementById("message");
     const buttons = document.querySelectorAll(".letter-btn");
+    const correctSound = document.getElementById("correctSound");
+    const wrongSound = document.getElementById("wrongSound");
 
     function generateLetter() {
         const randomLetter = letters[Math.floor(Math.random() * letters.length)];
@@ -15,10 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("data-letter") === letterDisplay.textContent) {
                 message.textContent = "Correct! 🎉";
                 message.style.color = "green";
+                correctSound.play();
                 setTimeout(generateLetter, 1000); // Wait 1 second before generating a new letter
             } else {
                 message.textContent = "Try again! ❌";
                 message.style.color = "red";
+                wrongSound.play();
             }
         });
     });
