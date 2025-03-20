@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('https://path-to-your-spiderman-image.jpg') no-repeat center center fixed; /* Replace with the actual URL of your Spider-Man image */
+     background: url('spiderman-background.jfif') no-repeat center center fixed; /* Use the relative path to your Spider-Man image */
     background-size: cover; /* Ensure the image covers the entire background */
     display: flex;
     justify-content: center;
