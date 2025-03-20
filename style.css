@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     text-align: center;
     color: white;
@@ -61,4 +61,29 @@ img#imageDisplay {
     max-width: 100px;
     max-height: 100px;
     margin-bottom: 20px;
+}
+
+/* Additional media queries for better responsiveness */
+@media (max-width: 768px) {
+    .letter-display {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+    .letter-btn {
+        font-size: 6vw; /* Adjust button size for smaller screens */
+    }
+    #message {
+        font-size: 4vw; /* Adjust message size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .letter-display {
+        font-size: 10vw; /* Further adjust font size for very small screens */
+    }
+    .letter-btn {
+        font-size: 8vw; /* Further adjust button size for very small screens */
+    }
+    #message {
+        font-size: 5vw; /* Further adjust message size for very small screens */
+    }
 }
