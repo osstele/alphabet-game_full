@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #ff0000 50%, #0000ff 50%);
+    background: url('https://path-to-your-spiderman-image.jpg') no-repeat center center fixed; /* Replace with the actual URL of your Spider-Man image */
+    background-size: cover; /* Ensure the image covers the entire background */
     display: flex;
     justify-content: center;
     align-items: center;
