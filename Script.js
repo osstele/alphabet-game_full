@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-letter") === letterDisplay.textContent) {
-                if (letterDisplay.textContent === "A")
+                if (letterDisplay.textContent === "Z")
                     ASound.play();
                 else
                     message.textContent = "else";
