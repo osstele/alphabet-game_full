@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".letter-btn");
     const correctSound = document.getElementById("correctSound");
     const wrongSound = document.getElementById("wrongSound");
+    const ASound = document.getElementById("ASound");
 
     function generateLetter() {
         const randomLetter = letters[Math.floor(Math.random() * letters.length)];
