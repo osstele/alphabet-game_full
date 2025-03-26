@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-letter") === letterDisplay.textContent) {
                 if (letterDisplay.textContent === "A")
-                    message.textContent = "a for apple!";
+                    ASound.play();
                 else
                     message.textContent = "else";
                // message.textContent = "Correct! 🎉";
