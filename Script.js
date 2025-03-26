@@ -16,8 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-letter") === letterDisplay.textContent) {
-                if (letterDisplay.textContent === "Z")
+                if (letterDisplay.textContent === "Z")\
+                {
                     ASound.play();
+                    message.textContent = "Correct! 🎉";
+            }
                 else
                     message.textContent = "else";
                // message.textContent = "Correct! 🎉";
