@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     message.textContent = "a for apple!";
                 else
                     message.textContent = "else";
-                message.textContent = "Correct! 🎉";
+               // message.textContent = "Correct! 🎉";
                 message.style.color = "green";
                 correctSound.play();
                 setTimeout(generateLetter, 1000); // Wait 1 second before generating a new letter
