@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     message.textContent = "else";
                // message.textContent = "Correct! 🎉";
                 message.style.color = "green";
-                correctSound.play();
+                //correctSound.play();
                 setTimeout(generateLetter, 1000); // Wait 1 second before generating a new letter
             } else {
                 message.textContent = "Try again! ❌";
