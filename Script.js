@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-letter") === letterDisplay.textContent) {
-                message.textContent = "Correct! 🎉";
+                message.textContent = "Correct super! 🎉";
                 message.style.color = "green";
                 correctSound.play();
                 setTimeout(generateLetter, 1000); // Wait 1 second before generating a new letter
