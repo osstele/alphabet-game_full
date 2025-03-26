@@ -8,14 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function generateLetter() {
         const randomLetter = letters[Math.floor(Math.random() * letters.length)];
-        letterDisplay.textContent = randomLetter;
+        letterDisplay.textContent = "A";
         message.textContent = "";
     }
 
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-letter") === letterDisplay.textContent) {
-                message.textContent = "Correct super! 🎉";
+                if (letterDisplay.textContent === "A")
+                    message.textContent = "a for apple!";
+                else
+                    message.textContent = "else";
+                message.textContent = "Correct! 🎉";
                 message.style.color = "green";
                 correctSound.play();
                 setTimeout(generateLetter, 1000); // Wait 1 second before generating a new letter
