@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-letter") === letterDisplay.textContent) {
+                if ('A' === letterDisplay.textContent) {
+                message.textContent = "A FOR APPLE";
+                }
                 message.textContent = "Correct! 🎉";
                 message.style.color = "green";
                 correctSound.play();
