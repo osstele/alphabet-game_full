@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 else if (('Z' === letterDisplay.textContent) 
                     message.textContent = "Z FOR BALL";
                 
-                }
                 message.textContent = "Correct! 🎉";
                 message.style.color = "green";
                 correctSound.play();
