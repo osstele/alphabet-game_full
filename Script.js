@@ -5,27 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".letter-btn");
     const correctSound = document.getElementById("correctSound");
     const wrongSound = document.getElementById("wrongSound");
-    const ASound = document.getElementById("ASound");
 
     function generateLetter() {
         const randomLetter = letters[Math.floor(Math.random() * letters.length)];
-        letterDisplay.textContent = "Z";
+        letterDisplay.textContent = randomLetter;
         message.textContent = "";
     }
 
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-letter") === letterDisplay.textContent) {
-                if (letterDisplay.textContent === "Z")\
-                {
-                    ASound.play();
-                    message.textContent = "Correct! 🎉";
-            }
-                else
-                    message.textContent = "else";
-               // message.textContent = "Correct! 🎉";
+                message.textContent = "Correct! 🎉";
                 message.style.color = "green";
-                //correctSound.play();
+                correctSound.play();
                 setTimeout(generateLetter, 1000); // Wait 1 second before generating a new letter
             } else {
                 message.textContent = "Try again! ❌";
