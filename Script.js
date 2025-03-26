@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function generateLetter() {
         const randomLetter = letters[Math.floor(Math.random() * letters.length)];
-        letterDisplay.textContent = "A";
+        letterDisplay.textContent = "Z";
         message.textContent = "";
     }
 
