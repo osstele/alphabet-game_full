@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const wrongSound = document.getElementById("wrongSound");
     const letterButtons = document.querySelectorAll(".letter-btn");
 
+    let currentLetter = "";
+
     // Function to play sound based on letter
     function playLetterSound(letter) {
         const sound = document.getElementById(`${letter}Sound`);
@@ -13,14 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Function to display a random letter
+    function displayRandomLetter() {
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        currentLetter = letters[Math.floor(Math.random() * letters.length)];
+        letterDisplay.textContent = currentLetter;
+    }
+
     letterButtons.forEach(button => {
         button.addEventListener("click", () => {
             const letter = button.getAttribute("data-letter");
-            // Check if the letter is correct (you can add your own logic here)
-            if (letter === letterDisplay.textContent) {
+            if (letter === currentLetter) {
                 message.textContent = "Correct!";
                 correctSound.play();
                 playLetterSound(letter);
+                displayRandomLetter(); // Display a new random letter
             } else {
                 message.textContent = "Try again!";
                 wrongSound.play();
@@ -28,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Example logic to display a random letter (you can modify as needed)
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    letterDisplay.textContent = letters[Math.floor(Math.random() * letters.length)];
+    // Display the first random letter when the page loads
+    displayRandomLetter();
 });
