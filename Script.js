@@ -28,8 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (letter === currentLetter) {
                 message.textContent = "Correct!";
                 correctSound.play();
-                playLetterSound(letter);
-                displayRandomLetter(); // Display a new random letter
+
+                // Delay playing the letter sound by 2 seconds
+                setTimeout(() => {
+                    playLetterSound(letter);
+                    displayRandomLetter(); // Display a new random letter after playing the sound
+                }, 2000); // 2000 milliseconds = 2 seconds
             } else {
                 message.textContent = "Try again!";
                 wrongSound.play();
